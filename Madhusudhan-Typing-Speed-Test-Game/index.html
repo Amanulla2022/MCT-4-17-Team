@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Imprima&display=swap"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="header_div">
+        <h1 class="header">Try to check your speed</h1>
+      </div>
+      <div class="typing_div">
+        <div class="text_display_div">
+          <p id="text" class="text">...Loading</p>
+        </div>
+        <div class="input_text">
+          <div class="input_design">
+            <input
+              type="text"
+              id="inputs"
+              class="input"
+              id="inputfield"
+              value=""
+              dir="ltr"
+              placeholder=""
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+            />
+            <div id="timer" class="timer">1:00</div>
+            <div class="restart">
+              <img id="start" src="./image.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result">
+      Your Result
+      <h3 id="result"></h3>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

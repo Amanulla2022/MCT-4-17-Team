@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <a
+      href="https://www.flaticon.com/free-icons/portfolio"
+      title="portfolio icons"
+    ></a>
+  </head>
+
+  <body>
+    <nav>
+      <div class="icon">
+        <img src="resume.png" alt="resume icon" />
+      </div>
+      <div id="downloadButton" class="download">
+        <button>
+          <span class="material-symbols-outlined"> download </span>Download PDF
+        </button>
+      </div>
+    </nav>
+    <main>
+      <div class="maincontainer">
+        <div class="leftcontent">
+          <h3>Template Type</h3>
+          <select id="optionSelect">
+            <option value="Two-column">Two-column</option>
+            <option value="Minimalist">Minimalist</option>
+          </select>
+          <h4>Header color</h4>
+          <input
+            type="color"
+            name="Header color"
+            value="#8B0000"
+            id="Header color"
+          />
+          <h4>Header-Text color</h4>
+          <input type="color" name="Header-Text color" id="Header-Text color" />
+          <div class="personal">
+            <h5>Personal Details</h5>
+            <input type="text" placeholder="Name" id="Name" />
+            <input type="email" placeholder="E-mail ID" id="E-mail-ID" />
+            <input type="text" placeholder="Phone" id="Phone" maxlength="10" />
+            <input type="text" placeholder="City, Country" id="City" />
+          </div>
+          <div class="Professional">
+            <h5>Professional Details</h5>
+            <input
+              type="text"
+              placeholder="Wanted Job Title"
+              id="Wanted Job Title"
+            />
+            <textarea
+              name="Professional Summary"
+              placeholder="Professional Summary"
+              id="Professional-Summary"
+              cols="52"
+              rows="5"
+            ></textarea>
+            <input type="text" placeholder="Skills" id="Skills" />
+          </div>
+          <div class="Employment">
+            <button id="addEmploymentButton">Add Employment</button>
+          </div>
+
+          <div class="project">
+            <button id="addprojectButton">Add Project</button>
+          </div>
+
+          <h5>Educational Background</h5>
+          <div class="educational">
+            <button id="addeducationalButton">Add Education</button>
+          </div>
+        </div>
+
+        <div class="rightcontent" id="printContent" class="rightcontent2">
+          <div class="header"></div>
+          <div class="rightcontainer">
+            <div class="contacts" class="contacts2">
+              <h6 id="skill">SKILLS</h6>
+              <div id="skillDescription"></div>
+              <h6>CONTACT</h6>
+              <br />
+              <div id="phoneIcon">
+                <i class="fa-solid fa-phone" class="phoneIcon"></i>
+                <span id="phoneValue"></span>
+              </div>
+              <!-- <input type="text" id="Phone"> -->
+              <div id="mailIconContainer">
+                <i class="fa-solid fa-envelope"></i>
+                <span id="mailValue"></span>
+              </div>
+
+              <div id="locationIcon">
+                <i class="fa-solid fa-location-dot" id="locationIcon"></i>
+                <span id="locationvalue"></span>
+              </div>
+            </div>
+            <div class="storage" class="storage2">
+              <div id="summary">
+                <h6>SUMMARY</h6>
+                <span id="summaryvalue"></span>
+              </div>
+              <div id="employmentpro">
+                <h6>PROFESSIONAL EXPERIENCE</h6>
+                <span id="employvalue"></span>
+              </div>
+              <div id="project">
+                <h6>PROJECTS</h6>
+                <span id="projectvalue"></span>
+              </div>
+              <h6>Education</h6>
+              <span id="educationvalue"></span>
+            </div>
+            <div class="icons-move"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,455 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.main-container {
+  /* background-color: yellow; */
+  width: 100%;
+  height: 100vh;
+}
+
+form {
+  /* background-color: yellow; */
+  width: 100%;
+  /* height: 100vh; */
+
+  display: flex;
+  padding: 1.3rem 12rem;
+}
+
+.left-container {
+  background-color: rgba(255, 235, 205, 0.701);
+  width: 75%;
+  /* height: 100%; */
+  padding: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+}
+
+.title {
+  text-align: center;
+}
+
+/* head  */
+
+.head {
+  /* background-color: aliceblue; */
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+.left-head {
+  /* background-color: aliceblue; */
+  /* display: flex; */
+}
+
+.due-date {
+  background-color: rgba(167, 162, 162, 0.33);
+  border: none;
+  height: 2rem;
+  padding: 1rem;
+}
+
+.right-head {
+  /* background-color: aliceblue; */
+}
+
+.invoice-no {
+  background-color: rgba(167, 162, 162, 0.33);
+  width: 7rem;
+  height: 1.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 2px;
+  cursor: not-allowed;
+}
+
+/* underLine  */
+hr {
+  border: 0.2px solid rgba(139, 137, 137, 0.758);
+  /* width: 5rem; */
+}
+
+/* mid-1  */
+
+.mid1 {
+  /* background-color: skyblue; */
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.mid1-left {
+  /* background-color: aliceblue; */
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.mid1-input-text {
+  background-color: rgba(167, 162, 162, 0.33);
+  width: 28.5rem;
+  height: 2rem;
+
+  border: none;
+  border-radius: 2px;
+  padding: 1rem;
+}
+
+.mid1-right {
+  /* background-color: aliceblue; */
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* mid-2  */
+
+.mid2 {
+  /* background-color: yellow; */
+  margin: 0.5rem;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  margin: 1rem;
+}
+
+/* t-head  */
+.item-head {
+  /* background-color: aliceblue; */
+  width: 40rem;
+}
+
+.qty-head {
+  /* background-color: aliceblue; */
+  width: 5rem;
+}
+
+.price-head {
+  /* background-color: aliceblue; */
+  width: 8rem;
+}
+
+.action-head {
+  /* background-color: aliceblue; */
+  width: 1rem;
+}
+
+/* t-body  */
+
+tbody {
+  /* background-color: aliceblue; */
+  /* margin: 2rem; */
+}
+
+.item-name {
+  /* background-color: yellow; */
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.input-name-discription {
+  background-color: rgba(167, 162, 162, 0.33);
+  width: 39rem;
+  height: 2rem;
+  border: none;
+  border-radius: 2px;
+  padding: 1rem;
+}
+
+.qty-data {
+  /* background-color: yellow; */
+  background-color: rgba(167, 162, 162, 0.33);
+  width: 4rem;
+  height: 2rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.rupee {
+  /* background-color: yellow; */
+  /* background-color: rgba(167, 162, 162, 0.33); */
+  display: flex;
+  width: 7rem;
+  height: 2rem;
+}
+
+.rupee-icon {
+  background-color: rgba(167, 162, 162, 0.33);
+  width: 1.3rem;
+  height: 2rem;
+  font-size: 1.5rem;
+}
+
+.rupe-text {
+  /* background-color: yellow; */
+  background-color: rgba(167, 162, 162, 0.33);
+  width: 6rem;
+  height: 2rem;
+  padding: 1rem;
+
+  border: none;
+}
+
+.dlt {
+  /* background-color: rgba(171, 86, 86, 0.776); */
+  width: 4rem;
+  height: 2rem;
+  text-align: center;
+  cursor: pointer;
+  /* border-radius: 10px; */
+}
+
+.delete-btn {
+  /* background-color: rgba(167, 162, 162, 0.33); */
+  width: 2rem;
+  height: 2rem;
+}
+
+/* ADD ITEMS BUTTON  */
+
+.item-btn {
+  /* background-color: yellow; */
+  width: 15rem;
+  height: 6rem;
+  padding: 1rem;
+}
+
+.add-item {
+  background-color: rgb(63, 63, 202);
+  color: white;
+  width: 7rem;
+  height: 3rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  box-shadow: 0px 5px 5px 0px rgba(36, 36, 36, 0.676);
+  cursor: pointer;
+}
+
+.add-item:hover {
+  background-color: rgba(14, 14, 117, 0.931);
+}
+
+.add-item:active {
+  background-color: rgba(14, 14, 117, 0.931);
+  box-shadow: 0px 3px 3px 0px rgba(36, 36, 36, 0.676);
+  transform: translateY(4px);
+}
+
+/* MID-3  */
+
+.mid3 {
+  /* background-color: aliceblue; */
+  width: 100%;
+  height: 12rem;
+  padding: 1rem;
+}
+
+.mid3-right {
+  /* background-color: aliceblue; */
+  width: 28rem;
+  height: 10rem;
+  margin-left: 31rem;
+}
+
+.m3 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8rem;
+}
+
+/* Bottom  */
+
+.botom {
+  padding: 1rem;
+}
+
+.note {
+  background-color: rgba(167, 162, 162, 0.33);
+  width: 100%;
+  height: 1.3rem;
+  border: none;
+  border-radius: 2px;
+  margin-top: 0.3rem;
+  padding: 0.2rem;
+}
+
+/* right container  */
+
+.right-container {
+  /* background-color: seagreen; */
+  width: 25%;
+  /* height: 100%; */
+  padding: 1rem;
+}
+
+.review {
+  background-color: rgb(63, 63, 202);
+  color: white;
+  width: 18rem;
+  height: 3rem;
+  /* font-weight: bold; */
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0px 5px 5px 0px rgba(36, 36, 36, 0.676);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.review:hover {
+  background-color: rgba(14, 14, 117, 0.931);
+}
+
+.review:active {
+  background-color: rgba(14, 14, 117, 0.931);
+  box-shadow: 0px 3px 3px 0px rgba(36, 36, 36, 0.676);
+  transform: translateY(4px);
+}
+
+.currency {
+  /* background-color: yellow; */
+  margin: 1rem;
+  padding: 1rem;
+  width: 18rem;
+  height: 5rem;
+}
+
+.currency-options {
+  background-color: rgba(167, 162, 162, 0.33);
+  margin-top: 0.5rem;
+  width: 17rem;
+  height: 2rem;
+  border: gray;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.tax-rate {
+  /* background-color: yellow; */
+  margin: 1rem;
+  padding: 1rem;
+  width: 18rem;
+  height: 5rem;
+}
+
+.tax-text-area {
+  background-color: rgba(167, 162, 162, 0.33);
+  width: 17rem;
+  height: 2.2rem;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid silver;
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+
+.tax-text {
+  /* background-color: rgba(167, 162, 162, 0.33); */
+  width: 15rem;
+  height: 2rem;
+  border: none;
+  padding: 1rem;
+  /* border-radius: 5px; */
+}
+
+.percent {
+  /* background-color: rgba(167, 162, 162, 0.33); */
+  width: 2;
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.discount-rate {
+  /* background-color: yellow; */
+  margin: 1rem;
+  padding: 1rem;
+  width: 18rem;
+  height: 5rem;
+}
+
+/* -----------------model part-----------  */
+
+/* Modal Overlay styles */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  backdrop-filter: blur(5px); /* Background blur effect */
+  z-index: 1;
+}
+
+/* Modal styles */
+.modal {
+  position: absolute;
+  width: 60%;
+  height: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgb(231, 229, 227);
+}
+
+/* Close button styles */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.r-title {
+  text-align: center;
+}
+
+.r-bill-from-to {
+  display: flex;
+  margin: 1rem;
+  justify-content: space-between;
+
+  list-style-type: none;
+}
+
+.modalItemDetails {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.download-btn {
+  margin-bottom: 3rem;
+}

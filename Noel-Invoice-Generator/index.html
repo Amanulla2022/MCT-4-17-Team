@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Generator || MCT Project</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <form action="">
+        <!-- left part -->
+        <div class="left-container">
+          <h1 class="title"><u>Invoice</u></h1>
+
+          <div class="head">
+            <!-- left head  -->
+            <div class="left-head">
+              <span><b>Current Date:- </b></span>
+              <span class="Current-date" id="curr_date"></span>
+              <br /><br />
+              <span><b>Due Date:- </b></span>
+              <input type="date" name="Due-Date" required class="due-date" />
+            </div>
+
+            <!-- right head  -->
+            <div class="right-head">
+              <span><b>Invoice No:- </b></span>
+              <input
+                type="number"
+                placeholder="XXXXXX"
+                readonly
+                class="invoice-no"
+                id="invoice_no"
+              />
+            </div>
+          </div>
+
+          <hr />
+
+          <!-- mid-1  -->
+          <div class="mid1">
+            <div class="mid1-left">
+              <label for="bill-to"><b>Bill to:- </b></label>
+              <input
+                type="text"
+                placeholder="Who is this invoice to ?"
+                class="mid1-input-text"
+                id="custmer_name"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email adress"
+                class="mid1-input-text"
+                id="custmer_email"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Billing address"
+                class="mid1-input-text"
+                id="custmer_address"
+                required
+              />
+            </div>
+
+            <div class="mid1-right">
+              <label for="bill-to"><b>Bill from:- </b></label>
+              <input
+                type="text"
+                placeholder="Who is this invoice from ?"
+                class="mid1-input-text"
+                id="seller_name"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email adress"
+                class="mid1-input-text"
+                id="seller_email"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Billing address"
+                class="mid1-input-text"
+                id="seller_address"
+                required
+              />
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="mid2">
+            <table>
+              <thead>
+                <tr>
+                  <th class="item-head">ITEMS</th>
+                  <th class="qty-head">QTY</th>
+                  <th class="price-head">PRICE / RATE</th>
+                  <th class="action-head">ACTION</th>
+                </tr>
+              </thead>
+
+              <tbody id="table-body">
+                <tr id="itemrow">
+                  <td class="item-data">
+                    <div class="item-name">
+                      <input
+                        type="text"
+                        placeholder="item name"
+                        class="input-name-discription"
+                        required
+                      />
+                      <input
+                        type="text"
+                        placeholder="item description"
+                        class="input-name-discription"
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      placeholder="01"
+                      class="qty-data"
+                      id="item_qty"
+                      onkeyup="getSubTotal()"
+                      required
+                    />
+                  </td>
+                  <td>
+                    <div class="rupee">
+                      <span class="rupee-icon">₹</span>
+                      <input
+                        type="text"
+                        placeholder="01:00"
+                        class="rupe-text"
+                        id="item_price"
+                        onkeyup="getSubTotal()"
+                        required
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="dlt" id="dlt_row">
+                      <img
+                        src="./img/delete.png"
+                        alt=""
+                        class="delete-btn"
+                        onclick="removeInvoiceItem()"
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <hr />
+
+            <div class="item-btn" id="add-row">
+              <input
+                type="button"
+                value="Add Item"
+                class="add-item"
+                onclick="addNewRow()"
+              />
+            </div>
+          </div>
+
+          <!-- MID-3  -->
+          <div class="mid3">
+            <div class="mid3-right">
+              <div class="sub-total m3">
+                <span>Subtotal:- </span>
+                <span id="sub_total">₹ 1:00</span>
+              </div>
+              <div class="discount m3">
+                <span>Discount:- </span>
+                <span id="discount-per">(%)</span>
+                <span id="total-discount">₹ 0:00</span>
+              </div>
+              <div class="tax m3">
+                <span>Tax:- &nbsp&nbsp &nbsp&nbsp &nbsp</span>
+                <span id="tax-per">(%)</span>
+                <span id="total-tax">₹ 0:00</span>
+              </div>
+
+              <hr />
+
+              <div class="total m3">
+                <span>Total:- </span>
+                <span id="net-amount">₹ 0:00</span>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="botom">
+            <label for="">Notes:- </label>
+            <br />
+            <textarea
+              class="note"
+              rows="1"
+              placeholder="Thanks for your business."
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Right Part -->
+        <div class="right-container">
+          <input type="button" value="Review Invoice" class="review" />
+
+          <hr />
+
+          <div class="currency">
+            <label for="currency"><b>Currency:- </b></label>
+            <br />
+            <select class="currency-options" id="currency">
+              <option value="₹">IND (Indian Rupees)</option>
+              <option value="$">USD (United States Dollar)</option>
+              <option value="£">GBP (British Pound Sterling)</option>
+              <option value="¥">JPY (Japanese Yen)</option>
+              <option value="₿">BTC (Bitcoin)</option>
+            </select>
+          </div>
+
+          <div class="tax-rate">
+            <label for=""><b>Tax Rate:- </b></label>
+            <br />
+            <div class="tax-text-area">
+              <input
+                type="text"
+                value="00.00"
+                class="tax-text"
+                onkeyup="calculateTotal()"
+                id="input-tax"
+              />
+              <div class="percent">
+                <span> % </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="discount-rate">
+            <label for=""><b>Discount Rate:- </b></label>
+            <br />
+            <div class="tax-text-area">
+              <input
+                type="text"
+                value="00.00"
+                class="tax-text"
+                onkeyup="calculateTotal()"
+                id="input-discount"
+              />
+              <div class="percent">
+                <span> % </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!---------- new page  -------->
+
+    <!------------------ modal HTML------>
+    <div class="modal-overlay" id="invoiceReviewModal">
+      <div class="modal">
+        <span class="close-btn" onclick="closeReviewModal()">&times;</span>
+        <h2 class="r-title">Invoice Review</h2>
+        <p><b>Current Date:</b> <span id="modalCurrentDate"></span></p>
+        <p><b>Due Date:</b> <span id="modalDueDate"></span></p>
+        <div class="r-bill-from-to">
+          <ul>
+            <p><b>Bill From:</b></p>
+            <li><b>Name:</b> <span id="modalInvoiceFromName"></span></li>
+            <li><b>Email:</b> <span id="modalInvoiceFromEmail"></span></li>
+            <li><b>Address:</b> <span id="modalInvoiceFromAddress"></span></li>
+          </ul>
+
+          <ul>
+            <p><b>Bill to:</b></p>
+            <li><b>Name:</b> <span id="modalInvoiceToName"></span></li>
+            <li><b>Email:</b> <span id="modalInvoiceToEmail"></span></li>
+            <li><b>Address:</b> <span id="modalInvoiceToAddress"></span></li>
+          </ul>
+        </div>
+
+        <div class="r-item-details" id="modalItemDetails"></div>
+
+        <button id="download-btn">Download</button>
+      </div>
+    </div>
+
+    <!-- <button class="download-btn">Download</button> -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
