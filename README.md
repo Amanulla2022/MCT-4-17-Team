@@ -2,9 +2,9 @@
 
 ## Amanulla Mulla - Chrome-Extension
 
-    - [Demo_video](https://drive.google.com/file/d/1zGOEMcbUoOKr0NcilIyE-rBzEhivwSVF/view?usp=sharing)
+     [Demo_video](https://drive.google.com/file/d/1zGOEMcbUoOKr0NcilIyE-rBzEhivwSVF/view?usp=sharing)
 
-    - [Repo_link](https://github.com/Amanulla2022/youtube_extension)
+     [Repo_link](https://github.com/Amanulla2022/youtube_extension)
 
 ## Deepak Arani - Resume-Template
 
